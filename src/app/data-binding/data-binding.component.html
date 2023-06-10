@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+<input type="text" [(ngModel)]="text" />
+<br />
+<button (click)="show()">Show</button>
+<child-cmp [(count)]="count"></child-cmp>
+
+<h2>{{ count }}</h2>

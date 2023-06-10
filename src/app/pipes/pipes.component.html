@@ -1,0 +1,18 @@
+<h1>Template expressions</h1>
+{{ isAdd ? "Add teacher" : "Edit teacher" }}
+<br />
+{{ n + 1 }}
+<br />
+Pow: {{ pow(5) }}
+
+<hr />
+{{ toUppercase(text) }}
+<hr />
+{{ digit | readNumber : true : digit }}
+<p>{{ "matn" | uppercase }}</p>
+<!-- <h2>Uppercase</h2>
+<p>{{ "MATN" | lowercase }}</p>
+<p>{{ 1200 | currency }}</p>
+<p>{{ today | date : "YYYY.MM.dd" }}</p>
+<p>{{ today | date : "YYYY.MM.dd HH:mm" }}</p>
+<p>{{ today | date : "short" }}</p> -->

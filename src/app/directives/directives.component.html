@@ -1,0 +1,119 @@
+<h1>Only letter</h1>
+
+<input type="text" onlyLetter />
+
+<hr />
+
+My currency
+{{ 1234567 | myCurrency : "sum" }}
+
+<hr />
+
+<h3>STYLE</h3>
+<p [style]="style()">Vue</p>
+<p [style.color]="'red'">React</p>
+<p [style.fontSize.px]="30">Angular</p>
+
+<hr />
+<h3>ngFor</h3>
+<ng-container
+  *ngFor="
+    let item of [].constructor(5);
+    index as i;
+    first as isFirst;
+    last as isLast;
+    even as isEven;
+    odd as isOdd
+  "
+>
+  <p
+    [ngStyle]="{
+      color: isFirst ? 'red' : 'black',
+      background: isLast ? 'red' : 'white',
+      fontSize: isOdd ? '20px' : '14px'
+    }"
+  >
+    Angular {{ i }}
+  </p>
+</ng-container>
+
+<hr />
+
+<h3>ngSwitch</h3>
+<ng-container [ngSwitch]="type">
+  <ng-template [ngSwitchCase]="react">React</ng-template>
+  <ng-template [ngSwitchCase]="'vue'">Vue</ng-template>
+  <ng-template [ngSwitchCase]="'angular'">Angular</ng-template>
+</ng-container>
+
+<hr />
+
+<!-- 
+<h2>CUSTOM DIRECTIVE</h2>
+<button [btn]="'default'">Click me</button>
+<button [btn]="'danger'" color="red">Click me</button>
+<button [btn]="'primary'" color="blue">Click me</button>
+
+<hr />
+
+<h2>ATRIBUTE DIRECTIVES</h2>
+<input type="text" [(ngModel)]="digit" />
+<p
+  class="fs-30"
+  *ngFor="let text of [].constructor(5); let i = index"
+  [ngStyle]="{
+    background: i == digit ? 'red' : 'blue',
+    color: i == digit ? 'blue' : 'red',
+    fontSize: i == digit ? '14px' : '30px'
+  }"
+>
+  ng Style ({{ i }})
+</p>
+
+<h3>Ng CLASS</h3>
+<p
+  class="fs-30"
+  *ngFor="let text of [].constructor(5); let i = index"
+  [ngClass]="{ custom: digit == i }"
+>
+  ng CLASS ({{ i }})
+</p> -->
+
+<!-- <p
+  class="fs-30"
+  *ngFor="let text of [].constructor(5); let i = index"
+  [ngStyle]="{ background: i == digit ? 'red' : 'blue' }"
+>
+  ng Style ({{ i }})
+</p> -->
+
+<hr />
+<hr />
+
+<!-- <h2>STRUCTURAL DIRECTIVES</h2> -->
+<!-- NG IF -->
+<!-- <ng-container *ngIf="!isMatn; else temp">
+  <p>Matn</p>
+</ng-container>
+<ng-template #temp>
+  template <br />
+  <p>Matn emas</p>
+</ng-template>
+<hr /> -->
+
+<!-- NG FOR -->
+<!-- <ng-container *ngFor="let text of data">
+  <p>
+    <span *ngIf="text.includes('H')">
+      {{ text }}
+    </span>
+  </p>
+</ng-container> -->
+
+<!-- NG SWITCH -->
+<!-- <ng-container [ngSwitch]="digit">
+  <span *ngSwitchCase="1">Bir</span>
+  <span *ngSwitchCase="2">Ikki</span>
+  <span *ngSwitchCase="3">Uch</span>
+  <span *ngSwitchDefault>Bunday son yo'q</span>
+</ng-container> -->

@@ -1,0 +1,19 @@
+.fs-30 {
+  font-size: 30px;
+}
+
+.custom {
+  background: red;
+  color: blue;
+  font-size: 40px;
+}
+
+.btn {
+  border: none;
+  background: #f3f3f3;
+  padding: 20px;
+}
+
+button {
+  margin-right: 10px;
+}

@@ -48,7 +48,6 @@ My currency
 
 <hr />
 
-<!-- 
 <h2>CUSTOM DIRECTIVE</h2>
 <button [btn]="'default'">Click me</button>
 <button [btn]="'danger'" color="red">Click me</button>
@@ -77,43 +76,42 @@ My currency
   [ngClass]="{ custom: digit == i }"
 >
   ng CLASS ({{ i }})
-</p> -->
+</p>
 
-<!-- <p
+<p
   class="fs-30"
   *ngFor="let text of [].constructor(5); let i = index"
   [ngStyle]="{ background: i == digit ? 'red' : 'blue' }"
 >
   ng Style ({{ i }})
-</p> -->
+</p>
 
-<hr />
 <hr />
 
 <!-- <h2>STRUCTURAL DIRECTIVES</h2> -->
 <!-- NG IF -->
-<!-- <ng-container *ngIf="!isMatn; else temp">
+<ng-container *ngIf="!isMatn; else temp">
   <p>Matn</p>
 </ng-container>
 <ng-template #temp>
   template <br />
   <p>Matn emas</p>
 </ng-template>
-<hr /> -->
+<hr />
 
 <!-- NG FOR -->
-<!-- <ng-container *ngFor="let text of data">
+<ng-container *ngFor="let text of data">
   <p>
     <span *ngIf="text.includes('H')">
       {{ text }}
     </span>
   </p>
-</ng-container> -->
+</ng-container>
 
 <!-- NG SWITCH -->
-<!-- <ng-container [ngSwitch]="digit">
+<ng-container [ngSwitch]="digit">
   <span *ngSwitchCase="1">Bir</span>
   <span *ngSwitchCase="2">Ikki</span>
   <span *ngSwitchCase="3">Uch</span>
   <span *ngSwitchDefault>Bunday son yo'q</span>
-</ng-container> -->
+</ng-container>

@@ -1,0 +1,16 @@
+<button (click)="toggle()">Show animation</button>
+
+<p [@openClose]="isOpened ? 'open' : 'closed'">Animation</p>
+
+<button (click)="second = !second">Toggle second Animation</button>
+<p [@animate] *ngIf="second">Second animation</p>
+
+<p [@flyInOut]="'in'">Fly</p>
+
+<button (click)="third = !third">Third animation</button>
+<div @myInsertRemoveTrigger *ngIf="third" class="insert-remove-container">
+  <p>The box is inserted</p>
+</div>
+
+<p @filterAnimation>{{ count }}</p>
+<button (click)="count = count + 1">+</button>

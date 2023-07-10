@@ -1,0 +1,10 @@
+<div class="login">
+  <ng-content select="#title"></ng-content>
+  <input #login type="text" placeholder="Login" />
+  <input type="password" placeholder="Password" />
+
+  <ng-content select="app-remember-me"></ng-content>
+  <app-message [hidden]="!showMessage"></app-message>
+
+  <button>Login</button>
+</div>

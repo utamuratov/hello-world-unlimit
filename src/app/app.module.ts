@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ChildComponent } from './data-binding/child/child.component';
@@ -12,8 +13,8 @@ import { ReadNumber } from './pipes/read-number.pipe';
 import { BtnDirective } from './directives/btn.directive';
 import { OnlyLetterDirective } from './directives/only-letter.directive';
 import { MyCurrencyPipe } from './pipes/my-currency.pipe';
+import { Car } from './services/car.service';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
-import { NgContentComponent } from './ng-content/ng-content.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,16 @@ import { NgContentComponent } from './ng-content/ng-content.component';
     BtnDirective,
 
     ReadNumber,
-     OnlyLetterDirective,
-     MyCurrencyPipe,
-     NgTemplateComponent,
-     NgContentComponent,
+    OnlyLetterDirective,
+    MyCurrencyPipe,
+    NgTemplateComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

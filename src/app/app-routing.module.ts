@@ -15,7 +15,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { ActivateGuard } from './guards/activate.guard';
 import { LoadGuard } from './guards/load.guard';
-import { MatchGuard } from './guards/march.guard';
+import { MatchGuard } from './guards/match.guard';
 import { ActivateChildGuard } from './guards/activate-child.guard';
 import { DeactivateGuard } from './guards/deactivate.guard';
 
@@ -79,4 +79,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

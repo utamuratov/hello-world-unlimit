@@ -18,6 +18,7 @@ import { LoadGuard } from './guards/load.guard';
 import { MatchGuard } from './guards/match.guard';
 import { ActivateChildGuard } from './guards/activate-child.guard';
 import { DeactivateGuard } from './guards/deactivate.guard';
+import { TestComponent } from './tests/test/test.component';
 
 @Injectable({
   providedIn: 'root',
@@ -68,6 +69,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./animation/animation.module').then((m) => m.AnimationModule),
   },
+
+  { path: 'test', component: TestComponent },
 ];
 
 @NgModule({

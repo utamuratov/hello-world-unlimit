@@ -15,6 +15,8 @@ import { OnlyLetterDirective } from './directives/only-letter.directive';
 import { MyCurrencyPipe } from './pipes/my-currency.pipe';
 import { Car } from './services/car.service';
 import { NgTemplateComponent } from './ng-template/ng-template.component';
+import { LoggerService } from './services/logger.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,8 +37,9 @@ import { NgTemplateComponent } from './ng-template/ng-template.component';
     BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [{ provide: Window, useValue: window }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
